@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { topics } from "@/assets/page";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+
 
 const Forums = () => {
   return (
@@ -49,10 +49,10 @@ const Forums = () => {
 
                 <Link href={`/forum/${topic.slug || 'room'}`} className="z-20">
                  
-                  <Button variant="outline" className="bg-white/5 cursor-pointer md:bg-transparent p-3 md:p-0 rounded-full border border-white/10 md:border-none opacity-100 md:opacity-0 md:translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-blue-400 flex items-center gap-2 font-bold text-xs uppercase tracking-widest">
+                  <button variant="outline" className="cursor-pointer md:bg-transparent p-3 md:p-0 rounded-full border  md:border-none opacity-100 md:opacity-0 md:translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-blue-400 flex items-center gap-2 font-bold text-xs uppercase tracking-widest">
                     <span className="">Join</span>
                     <span className="text-xl hidden md:inline">→</span>
-                    </Button>
+                    </button>
                 </Link>
               </div>
 
