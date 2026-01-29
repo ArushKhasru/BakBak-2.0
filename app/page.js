@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
   return (
@@ -24,12 +25,14 @@ export default function HomePage() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-20">
-          <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:scale-105">
+          <Link href={"/forums"}>
+          <Button className="px-8 py-4 cursor-pointer bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:scale-105">
             Start Chatting Free
-          </button>
-          <button className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-xl transition-all backdrop-blur-md">
+          </Button>
+          </Link>
+          <Button className="px-8 py-4 cursor-pointer bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-xl transition-all backdrop-blur-md">
             View Features
-          </button>
+          </Button>
         </div>
 
         {/* Dashboard Mockup Placeholder */}
