@@ -1,5 +1,8 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+
+
 
 export default function HomePage() {
   return (
@@ -107,10 +110,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer Space */}
-      <footer className="py-10 text-center text-gray-600 border-t border-white/5">
-        © 2026 ChatApp. All rights reserved.
-      </footer>
     </main>
   );
 }

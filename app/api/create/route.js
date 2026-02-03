@@ -1,5 +1,7 @@
 
 import { StreamChat } from "stream-chat";
+import { auth, clerkClient } from '@clerk/nextjs/server'
+
 
 const api_key = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 const api_secret = process.env.NEXT_PUBLIC_STREAM_API_SECRET;
@@ -11,8 +13,12 @@ export async function POST(request) {
   // Create User Token
   // console.log(token)
   const user = await request.json();
-  
+
   const token = serverClient.createToken(user.data.id);
-  console.log("A NEW USER HAS BEEN CREATED");
+  console.log("A NEW USER HAS BEEN CREATED", token);
+  const client = await clerkClient();
+  await client.users.updateUser(user.data.id, {
+    publicMetadata: { token: token },
+  });
   return Response.json({ projectName: 'Next.js' })
 }
