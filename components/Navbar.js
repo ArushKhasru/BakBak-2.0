@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
 
 const Navbar = () => {
-  // const user = useUser();
-  // console.log(user.user?.id)
+  const user = useUser();
+  console.log(user.user?.id)
   return (
-    <nav className="sticky top-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
+    <nav className=" top-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
       <div className=" max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
         {/* Brand/Logo */}

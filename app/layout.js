@@ -1,5 +1,8 @@
+
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 import {
   ClerkProvider,
   SignInButton,
@@ -34,7 +37,8 @@ export default function RootLayout({ children }) {
         >
           <Navbar />
           {children}
-        </body>
+          <Footer />
+       </body>
       </html>
     </ClerkProvider>
   );
