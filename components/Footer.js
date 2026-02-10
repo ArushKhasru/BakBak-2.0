@@ -1,16 +1,25 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { FaTwitter, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaDiscord } from "react-icons/fa";
+import {BsTwitterX} from "react-icons/bs";
 
+
+// Define the social links data
+const socialLinks = [
+    { icon: <BsTwitterX className="w-5 h-5" />, label: "x.com", href: "https://x.com/KhasruAru" },
+    { icon: <FaGithub className="w-5 h-5" />, label: "github", href: "https://github.com/ArushKhasr4u" },
+    { icon: <FaDiscord className="w-5 h-5" />, label: "discord", href: "https://discord.gg/WBD3Qr2K" },
+];
 
 export default function Footer() {
-    const [email, setEmail] = useState("");
+
+
 
     return (
-        <footer className="relative border-t border-white/5 bg-[#050505] pt-16 pb-8 px-6 overflow-hidden">
+        <footer className=" border-t border-white/5 bg-[#050505] pt-16 pb-8 px-6 overflow-hidden mt-10">
             {/* Subtle Background Glow Line */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+            <div className=" top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Main Grid: 1 col on mobile, 4 on md+ */}
@@ -24,26 +33,6 @@ export default function Footer() {
                         <p className="text-gray-500 max-w-sm leading-relaxed mb-8 text-sm md:text-base">
                             The future of private messaging. Secure, open-source, and built for the next generation of the web.
                         </p>
-                        
-                        {/* Newsletter Input - Responsive Width */}
-                        <div className="flex w-full max-w-sm group/input">
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Updates via email"
-                                className="w-full bg-white/5 border border-white/10 rounded-l-xl px-4 py-2 text-white text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
-                            />
-                            <button
-                                className={`px-6 py-2 rounded-r-xl text-sm font-bold transition-all duration-500 border-y border-r whitespace-nowrap
-                                    ${email.length > 0 
-                                        ? "bg-blue-600 border-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]" 
-                                        : "bg-white/5 border-white/10 text-gray-500"
-                                    }`}
-                            >
-                                Join
-                            </button>
-                        </div>
                     </div>
 
                     {/* Links Column 1 */}
@@ -58,32 +47,36 @@ export default function Footer() {
 
                     {/* Links Column 2 */}
                     <div className="flex flex-col items-center md:items-start">
-                        <h4 className="text-white font-bold mb-6 text-xs uppercase tracking-[0.2em]">Resources</h4>
-                        <ul className="space-y-4 text-gray-500 text-sm">
-                            <li><Link href="/" className="hover:text-blue-400 transition-colors">Documentation</Link></li>
-                            <li><Link href="/" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
-                        </ul>
+                        <h4 className="text-white font-bold mb-6 text-xs uppercase tracking-[0.2em]"> Connect</h4>
+                       
+                    <div className="flex flex-col gap-5 ">
+                        {socialLinks.map((social, index) => (
+                            <Link
+                                key={index}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-500 hover:text-white transition-colors"
+                                aria-label={social.label}
+                            >
+                                <div className="flex gap-2">
+                                {social.icon} {social.label}
+
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                     </div>
 
                 </div>
 
-                {/* Bottom Bar: Stacked on mobile, row on md+ */}
+                {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
                     <p className="text-gray-600 text-[10px] md:text-xs text-center">
                         © 2026 BAKBAK Inc. Built with Next.js & Tailwind CSS.
                     </p>
-                    <div className="flex gap-8 ">
-                        {[<FaTwitter className="w-5 h-5" />, <FaGithub className="w-5 h-5" />, <FaDiscord className="w-5 h-5" />].map((social, index) => (
-                            <Link
-                                key={index}
-                                href="#"
-                                className="text-gray-500 hover:text-white text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors"
-                            >
-                                {social}
-                            </Link>
-                        ))}
-                    </div>
+                    
+
                 </div>
             </div>
         </footer>

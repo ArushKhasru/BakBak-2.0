@@ -45,3 +45,7 @@ export default async function Page({ params }) {
 
   return <ChatForum slug={slug} clerkUser = {{id: user.id, name:user.firstname, token: token }}/>
 }
+export const metadata = {
+  title:  'ChatForum - BakBak',
+  description: 'Welcome to BakBak, your secure and reliable chat application.',
+}

@@ -29,8 +29,7 @@ const Forums = () => {
           {topics.map((topic) => (
             <div 
               key={topic.src} 
-              className="relative group flex flex-col p-6 md:p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.04] transition-all duration-500 backdrop-blur-sm"
-            >
+              className="relative group flex flex-col p-6 md:p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.04] transition-all duration-500 backdrop-blur-sm" >
               {/* Top Row: Icon & Responsive Action */}
               <div className="flex justify-between items-start mb-8">
                 <div className="relative">
@@ -85,3 +84,8 @@ const Forums = () => {
 };
 
 export default Forums;
+
+export const metadata = {
+  title: 'ChatForum - BakBak',
+  description: 'Welcome to BakBak, your secure and reliable chat application.',
+}
