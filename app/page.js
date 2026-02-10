@@ -56,7 +56,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { title: "E2E Encryption", desc: "Messages are encrypted locally. Even we can't read them.", icon: "🔒" },
-            { title: "Quantum Ready", desc: "Future-proof security that stays ahead of the curve.", icon: "🧬" },
+            { title: "", desc: "Future-proof security that stays ahead of the curve.", icon: "🧬" },
             { title: "Open Source", desc: "Transparent code audited by global security experts.", icon: "📂" }
           ].map((feature, i) => (
             <div key={i} className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all group">

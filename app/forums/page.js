@@ -66,15 +66,7 @@ const Forums = () => {
               </div>
 
               {/* Footer Stats */}
-              <div className="pt-6 border-t border-white/5 flex items-center justify-between text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-gray-500 font-bold">
-                <div className="flex flex-col">
-                  <span className="text-gray-400">2.4k Members</span>
-                </div>
-                <div className="flex items-center gap-2 bg-green-500/5 px-2 py-1 rounded-md border border-green-500/10 italic">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-green-500/80">142 Online</span>
-                </div>
-              </div>
+          
             </div> 
           ))}
         </div>

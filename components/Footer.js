@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FaGithub, FaDiscord } from "react-icons/fa";
-import {BsTwitterX} from "react-icons/bs";
+import { BsTwitterX } from "react-icons/bs";
 
 
 // Define the social links data
@@ -45,27 +45,53 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Links Column 2 */}
+                   
                     <div className="flex flex-col items-center md:items-start">
                         <h4 className="text-white font-bold mb-6 text-xs uppercase tracking-[0.2em]"> Connect</h4>
-                       
-                    <div className="flex flex-col gap-5 ">
-                        {socialLinks.map((social, index) => (
-                            <Link
-                                key={index}
-                                href={social.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-500 hover:text-white transition-colors"
-                                aria-label={social.label}
-                            >
-                                <div className="flex gap-2">
-                                {social.icon} {social.label}
 
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
+                        <div className="flex flex-col gap-6">
+
+                            <div className="flex flex-col gap-4">
+                                {socialLinks.map((social, index) => (
+                                    <Link
+                                        key={index}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={social.label}
+                                        className="
+          group
+          flex items-center gap-3
+          text-gray-500 hover:text-white
+          transition-all duration-200
+        "
+                                    >
+
+                                        {/* Icon */}
+                                        <span className="
+          text-gray-600
+          group-hover:text-white
+          transition-colors duration-200
+        ">
+                                            {social.icon}
+                                        </span>
+
+                                        {/* Label */}
+                                        <span className="
+          text-lg
+          font-medium
+          tracking-wide
+          group-hover:translate-x-1
+          transition-transform duration-200
+        ">
+                                            {social.label}
+                                        </span>
+
+                                    </Link>
+                                ))}
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
@@ -75,7 +101,7 @@ export default function Footer() {
                     <p className="text-gray-600 text-[10px] md:text-xs text-center">
                         © 2026 BAKBAK Inc. Built with Next.js & Tailwind CSS.
                     </p>
-                    
+
 
                 </div>
             </div>
