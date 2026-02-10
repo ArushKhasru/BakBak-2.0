@@ -1,10 +1,11 @@
 import reactNext from '../assets/react-next.png';
+import Developer from '../assets/developer.jpg';
 export const topics = [
   {
     text: "Python",
     desc: "Discuss libraries, frameworks like FastAPI, and automation scripts.",
     src: "https://images.unsplash.com/photo-1538439907460-1596cafd4eff?q=80&w=1156&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    slug:"python-",
+    slug:"python",
 },
   {
     text: "Cryptography",
@@ -16,19 +17,26 @@ export const topics = [
     text: "UI Design",
     desc: "Share glassmorphism techniques, Tailwind tips, and UX best practices.",
     src: "https://plus.unsplash.com/premium_vector-1734510179333-a289f7669d2c?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    slug:"ui-design-"
+    slug:"ui-design"
 },
   {
     text: "React/Next.js",
     desc: "Modern frontend patterns, server components, and performance tuning.",
     src: reactNext,
-    slug:"react-nextjs-"
+    slug:"react-nextjs"
 },
   {
     text: "Cybersecurity",
     desc: "Talk about threat modeling, zero-trust architecture, and data privacy.",
     src: "https://plus.unsplash.com/premium_vector-1727472798424-ac2a798a4873?q=80&w=991&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    slug:"cybersecurity-"
+    slug:"cybersecurity"
+},
+{
+    text:"Talk with Developer",
+    desc:"You can give the feedback here and also ask for features you want in this app.",
+    src:Developer,
+    slug:"talk-with-developer"
+
 }
 ];
 
