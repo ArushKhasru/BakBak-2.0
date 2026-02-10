@@ -17,9 +17,9 @@ export default function Footer() {
 
 
     return (
-        <footer className=" border-t border-white/5 bg-[#050505] pt-16 pb-8 px-6 overflow-hidden mt-10">
+        <footer className="relative border-t border-white/5 bg-[#050505] pt-16 pb-8 px-6 overflow-hidden">
             {/* Subtle Background Glow Line */}
-            <div className=" top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Main Grid: 1 col on mobile, 4 on md+ */}
