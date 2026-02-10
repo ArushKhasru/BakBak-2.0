@@ -36,7 +36,7 @@ export default async function Page({ params }) {
     // Channel doesn't exist, create it
     channel = serverClient.channel('messaging', slug, {
       image: 'https://getstream.io/random_png/?name=react',
-      name: capitalize(slug) + "Channel",
+      name: capitalize(slug) + "- Channel",
       members: [user.id],
       created_by_id: user.id,
     });
