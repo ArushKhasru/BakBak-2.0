@@ -27,8 +27,8 @@ const Forums = () => {
         {/* Responsive Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {topics.map((topic) => (
-            <div 
-              key={topic.src} 
+            <div
+              key={topic.slug}
               className="relative group flex flex-col p-6 md:p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.04] transition-all duration-500 backdrop-blur-sm" >
               {/* Top Row: Icon & Responsive Action */}
               <div className="flex justify-between items-start mb-8">
