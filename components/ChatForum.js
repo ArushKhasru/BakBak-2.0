@@ -5,6 +5,10 @@ import { useState, useEffect } from 'react';
 import { useCreateChatClient, Chat, Channel, ChannelHeader, MessageInput, MessageList, Thread, Window } from 'stream-chat-react';
 import 'stream-chat-react/dist/css/v2/index.css';
 
+function capitalize (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
 export default function ChatForum({ clerkUser, slug }) {
   const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
   const userId = clerkUser.id;
@@ -29,7 +33,7 @@ export default function ChatForum({ clerkUser, slug }) {
 
     const channel = client.channel('messaging', slug, {
       image: 'https://getstream.io/random_png/?name=react',
-      name: slug.toUpperCase() + "Channel",
+      name: capitalize(slug) + "Channel",
       members: [userId],
     });
 

@@ -74,9 +74,9 @@ export default function Footer() {
                         © 2026 BAKBAK Inc. Built with Next.js & Tailwind CSS.
                     </p>
                     <div className="flex gap-8 ">
-                        {[<FaTwitter className="w-5 h-5" />, <FaGithub className="w-5 h-5" />, <FaDiscord className="w-5 h-5" />].map((social) => (
+                        {[<FaTwitter className="w-5 h-5" />, <FaGithub className="w-5 h-5" />, <FaDiscord className="w-5 h-5" />].map((social, index) => (
                             <Link
-                                key={social}
+                                key={index}
                                 href="#"
                                 className="text-gray-500 hover:text-white text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors"
                             >
