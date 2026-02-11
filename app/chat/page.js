@@ -52,9 +52,9 @@ function ChatApp({ user, apiKey }) {
     if (!client || !user || !id.trim()) return;
 
     const members = [user.id, id].sort();
-    const channelId = `dm-${members.join('-')}`.substring(0, 64).replace(/[^a-zA-Z0-9_-]/g, '_');
+    // const channelId = `dm-${members.join('-')}`.substring(0, 64).replace(/[^a-zA-Z0-9_-]/g, '_');
 
-    const chatChannel = client.channel('messaging', channelId, {
+    const chatChannel = client.channel('messaging', otherUserId, {
       members,
       isDirectMessage: true,
     });

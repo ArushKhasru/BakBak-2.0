@@ -7,9 +7,9 @@ import { BsTwitterX } from "react-icons/bs";
 
 // Define the social links data
 const socialLinks = [
-    { icon: <BsTwitterX className="w-5 h-5" />, label: "x.com", href: "https://x.com/KhasruAru" },
-    { icon: <FaGithub className="w-5 h-5" />, label: "github", href: "https://github.com/ArushKhasr4u" },
-    { icon: <FaDiscord className="w-5 h-5" />, label: "discord", href: "https://discord.gg/WBD3Qr2K" },
+    { icon: <BsTwitterX className="w-5 h-5" />, label: "X.com", href: "https://x.com/KhasruAru" },
+    { icon: <FaGithub className="w-5 h-5" />, label: "Github", href: "https://github.com/ArushKhasr4u" },
+    { icon: <FaDiscord className="w-5 h-5" />, label: "Discord", href: "https://discord.gg/WBD3Qr2K" },
 ];
 
 export default function Footer() {
@@ -78,7 +78,7 @@ export default function Footer() {
 
                                         {/* Label */}
                                         <span className="
-          text-lg
+          text-xs
           font-medium
           tracking-wide
           group-hover:translate-x-1

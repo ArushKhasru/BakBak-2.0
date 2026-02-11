@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
           </li>
 
-          {/* Desktop User ID with Copy */}
+          {/* Desktop User ID with Copya */}
           {user && (
             <li className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
 

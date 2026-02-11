@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-
+import AppleCarousel from '@/components/Carousel';
 
 
 export default function HomePage() {
@@ -27,22 +27,23 @@ export default function HomePage() {
           No tracking. No ads. Just pure conversation.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mb-20">
+        <div className="flex flex-col sm:flex-col gap-4 mb-20">
           <Link href={"/forums"}>
-          <Button className="px-8 py-4 cursor-pointer bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:scale-105">
-            Start Chatting Free
-          </Button>
+            <Button className="px-8 py-4 cursor-pointer bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:scale-105">
+              Start Chatting Free
+            </Button>
           </Link>
           <Button className="px-8 py-4 cursor-pointer bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-xl transition-all backdrop-blur-md">
             View Features
           </Button>
+          
         </div>
+       
+       
 
         {/* Dashboard Mockup Placeholder */}
-        <div className="w-full max-w-5xl mx-auto rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-2 shadow-2xl">
-          <div className="rounded-xl bg-black/80 aspect-video flex items-center justify-center text-gray-600 border border-white/5 italic">
-            [ Interactive Chat Interface Preview ]
-          </div>
+        <div className="w-full max-w-5xl mx-auto">
+          <AppleCarousel />
         </div>
       </section>
 
