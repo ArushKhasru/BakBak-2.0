@@ -8,7 +8,7 @@ import { BsTwitterX } from "react-icons/bs";
 // Define the social links data
 const socialLinks = [
     { icon: <BsTwitterX className="w-5 h-5" />, label: "X.com", href: "https://x.com/KhasruAru" },
-    { icon: <FaGithub className="w-5 h-5" />, label: "Github", href: "https://github.com/ArushKhasr4u" },
+    { icon: <FaGithub className="w-5 h-5" />, label: "Github", href: "https://github.com/ArushKhasru" },
     { icon: <FaDiscord className="w-5 h-5" />, label: "Discord", href: "https://discord.gg/WBD3Qr2K" },
 ];
 
