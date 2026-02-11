@@ -1,6 +1,7 @@
 import ChatForum from "@/components/ChatForum"
 import { currentUser, clerkClient } from "@clerk/nextjs/server";
 import { StreamChat } from "stream-chat";
+import { redirect } from "next/navigation";
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
