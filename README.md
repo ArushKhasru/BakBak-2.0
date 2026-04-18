@@ -58,12 +58,15 @@ Create a `.env.local` file in the repository root and define:
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=...
 CLERK_SECRET_KEY=...
 
-# Stream Chat (used in both server and client code in this repo)
+# Stream Chat
 NEXT_PUBLIC_STREAM_API_KEY=...
-NEXT_PUBLIC_STREAM_API_SECRET=...
+STREAM_API_SECRET=...
 ```
 
-> Note: In this codebase, `NEXT_PUBLIC_STREAM_API_SECRET` is referenced by server routes/components. Ensure values are set correctly for local execution.
+> Security note: keep secrets server-only. Do **not** expose Stream secrets to client components.
+>
+> Compatibility note: the current code references `NEXT_PUBLIC_STREAM_API_SECRET` in server files. For local compatibility without changing source, you can mirror it in `.env.local`:
+> `NEXT_PUBLIC_STREAM_API_SECRET=$STREAM_API_SECRET`.
 
 ## Getting Started
 
